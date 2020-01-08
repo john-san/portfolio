@@ -2,20 +2,47 @@
   "projects": [
     {
       "id": 1,
-      "project_name": "dummy1",
-      "description": "this is a test description.",
+      "project_name": "Quote Generator",
+      "description": "This project uses JavaScript to select a random quote object from an array and dynamically display that quote's properties on the page. User's can click on a button to generate a new random quote or they can wait and let the generator generate one automatically.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://www.google.com",
-      "github_link": "https://www.github.com",
+      "live_link": "https://john-san.github.io/quote-generator/",
+      "github_link": "https://github.com/john-san/quote-generator",
       "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
     },
     {
       "id": 2,
-      "project_name": "dummy2",
-      "description": "this is a test description.",
+      "project_name": "List Pagination Filtering",
+      "description": "This project uses JavaScript to display a subset of items from a long list. In addition, it creates to dynamically creates pagination links to allow the user to view more subsets. Lastly, it allows the user to search/filter for a subset of items based on a string input.",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "live_link": "https://www.google.com",
-      "github_link": "https://www.github.com",
+      "live_link": "https://john-san.github.io/list-pagination-filtering/",
+      "github_link": "https://github.com/john-san/list-pagination-filtering",
+      "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
+    },
+    {
+      "id": 3,
+      "project_name": "Interactive Form",
+      "description": "This project uses JavaScript & jQuery to add extra functionality to the form, making it easier to use. It follows progressive enhancement principles so the form still works at a basic level when JavaScript is disabled. Lastly, it uses JavaScript to validate the form in real-time and when a user tries to submit the form.",
+      "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
+      "live_link": "https://john-san.github.io/interactive-form/",
+      "github_link": "https://github.com/john-san/interactive-form",
+      "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
+    },
+    {
+      "id": 4,
+      "project_name": "Game Show App",
+      "description": "This project uses JavaScript and Object-Oriented Programming to create a phrase hunter game. It allows players to guess letters of a random phrase by either selecting a key from the onscreen keyboard or by pressing a key on their physical keyboard. If the player completes the phrase before they run out of guesses, a winning screen appears. If the player guesses incorrectly five times, a losing screen appears.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "https://john-san.github.io/oop-game-show-app/",
+      "github_link": "https://github.com/john-san/oop-game-show-app",
+      "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
+    },
+    {
+      "id": 5,
+      "project_name": "Employee Directory",
+      "description": "This project fetches employee data from a public API and displays that data in a user-friendly gallery. Users can click on an employee's card to open up a modal and view more details about that employee. While in the modal view, users can use the next and previous buttons(or left & right arrow keys) to toggle through the employees. In addition, there is a search bar at the top right of the gallery view that allows users to search for employees by name.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "https://john-san.github.io/public-api-requests/",
+      "github_link": "https://github.com/john-san/public-api-requests",
       "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
     }
   ]

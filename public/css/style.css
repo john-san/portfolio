@@ -140,6 +140,11 @@ a:hover{
   border: none;
 }
 
+.portfolio-project .lead {
+  font-size: 100%;
+  line-height: 1.8;
+}
+
 .portfolio-project li{
   font-size: 13px;
   color: #444;
