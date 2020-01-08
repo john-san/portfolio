@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "project_name": "dummy1",
+      "description": "this is a test description.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "https://www.google.com",
+      "github_link": "https://www.github.com",
+      "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
+    },
+    {
+      "id": 2,
+      "project_name": "dummy2",
+      "description": "this is a test description.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "live_link": "https://www.google.com",
+      "github_link": "https://www.github.com",
+      "image_urls": ["https://placeimg.com/550/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech", "https://placeimg.com/1200/550/tech"]
+    }
+  ]
+}

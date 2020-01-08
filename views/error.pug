@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content 
+  h2 Error #{err.status}: #{err.message}
+
+  h4 Here's the stack trace in case you want to know more.
+  
+  p #{err.stack}
