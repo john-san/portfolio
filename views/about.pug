@@ -1,8 +1,7 @@
 extends layout.pug
 
 block content 
-  nav.grid-container.portfolio-breadcrumb
-    a(href='/') ← Back
+  include includes/breadcrumb.pug
   article.grid-container.portfolio-intro.portfolio-project
     .grid-x
       .cell.small-12.medium-8.large-9
@@ -47,6 +46,5 @@ block content
         a.button.expanded(href='https://github.com/john-san' target='_blank') GitHub
         a.button.expanded(href='https://www.linkedin.com/in/john-san/' target='_blank') LinkedIn
         
-  nav.grid-container.portfolio-breadcrumb
-    a(href='/') ← Back
+  include includes/breadcrumb.pug
   

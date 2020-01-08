@@ -26,6 +26,12 @@ h1,h2,h3,h4,h5,p{
   border-radius: 5px;
 }
 
+/* override foundation reveal styles */
+.reveal {
+  background-color: initial;
+  padding: 0;
+}
+
 .text-light{
   color: #666;
 }
@@ -104,7 +110,7 @@ a:hover{
 
 .portfolio-intro p{
   border-bottom: 1px solid #eaeaea;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .portfolio-index{
@@ -158,13 +164,17 @@ a:hover{
     line-height: 25px;
 }
 
+.error-message {
 
-/* override foundation reveal styles */
-.reveal {
-  background-color: initial;
-  padding: 0;
 }
 
+.error-message .error-stack {
+  font-size: 12px;
+  line-height: 2;
+}
+
+
+/*** Media Queries ***/
 @media screen and (max-width: 39.9375em) {
   /* adjust modal display for imgs */
   .reveal img {
