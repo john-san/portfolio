@@ -129,7 +129,7 @@ a:hover{
     }
 
 .portfolio-meta{
-  padding-left: 20px;
+  
 }
 
   .portfolio-meta .button{
@@ -150,6 +150,32 @@ a:hover{
   color: #444;
 }
 
+.portfolio-project .image  {
+  cursor: pointer;
+}
+
 .portfolio-bio{
     line-height: 25px;
+}
+
+
+/* override foundation reveal styles */
+.reveal {
+  background-color: initial;
+  padding: 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+  /* adjust modal display for imgs */
+  .reveal img {
+    min-height: 50vh;
+    margin-top: 20vh;
+  }
+}
+
+@media (min-width: 640px) {
+  .portfolio-meta{
+    padding-left: 20px;
+  }
+
 }

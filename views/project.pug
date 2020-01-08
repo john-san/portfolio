@@ -5,7 +5,7 @@ block content
     a(href='/') ← Back
   article.grid-container.portfolio-intro.portfolio-project
     .grid-x
-      .cell.small-6.medium-9.large-9
+      .cell.small-12.medium-9.large-9
 
         //- Use interpolation to dynamically add the project title.
         h1= project.project_name
@@ -14,7 +14,7 @@ block content
         p.lead.text-light
           | #{project.description}
 
-      .cell.portfolio-meta.small-6.medium-2.large-3
+      .cell.portfolio-meta.small-12.medium-2.large-3
         h6 Technologies
 
         //- Use an `each` iterator to replace the li tags below and interpolation to dynamically add the technologies used in each project.
@@ -27,6 +27,10 @@ block content
         a.button.expanded(href=`${project.github_link}` target="_blank") GitHub Repo
     
     //- Replace the URLs in the src attributes below with template literals and interpolation to dynamically add three project images.  You only have to add one image.  But adding more images to show your app in different states demonstrates a level of thoroughness and professionalism that potential employers will like to see. 
-    img.image(src=`${project.image_urls[1]}`)
-    img.image(src=`${project.image_urls[2]}`)
-    img.image(src=`${project.image_urls[3]}`)
+    each image_url, idx in project.image_urls.slice(1)
+      img.image(src=`${image_url}` data-open=`gallery-image-${idx}`)
+      
+      div.reveal.large(id=`gallery-image-${idx}` data-reveal data-animation-in="fade-in" data-animation-out="fade-out" data-close-on-click="true")
+        img(src=`${image_url}`)
+        button.close-button(data-close='' aria-label='Close modal' type='button')
+          span(aria-hidden='true') &times;

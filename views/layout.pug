@@ -24,8 +24,13 @@ html(class="no-js" lang="en" dir="ltr")
             p.text-light
               | Full Stack JavaScript Developer
 
-            //- Add about page route to the href below. 
-            a(href='/about') Learn More →
+            //- Add about page route to the href below.
+            ul#sidebar-nav 
+              li
+                  a(href='/') Home
+              li
+                a(href='/about') About
+              
 
     .off-canvas-content(data-off-canvas-content='')
       .title-bar.hide-for-large
