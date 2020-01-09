@@ -29,12 +29,15 @@ h3, h4, h5, h6 {
   color: var(--second-supporting-color-dark);
 }
 
-h1, h2, h3, h4, h5, p{
-  font-family: 'Merriweather', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo', sans-serif;
+}
+
+body, p {
+  font-family: 'Roboto Slab', serif;
 }
 
   h5 {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 2.5px;
     -webkit-text-transform: uppercase;
     text-transform: uppercase;
@@ -54,6 +57,10 @@ h1, h2, h3, h4, h5, p{
 
 .round{
   border-radius: 5px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* borrowed from https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
@@ -81,11 +88,11 @@ h1, h2, h3, h4, h5, p{
   border: 2px solid var(--accent-color);
 }
 
-a{
+a {
   color: var(--accent-color-light);
 }
 
-a:hover{
+a:hover, a:focus {
   color: var(--accent-color-dark);
 }
 
@@ -112,9 +119,7 @@ a:hover{
     color: var(--accent-color);
   }
 
-#sidebar-nav {
-  
-}
+
   #sidebar-nav li a {
     color: var(--primary-color);
     font-size: 20px;
@@ -122,17 +127,20 @@ a:hover{
 
   #sidebar-nav li a:hover 
   {
-    color: var(--second-supporting-color-light);
+    color: var(--accent-color-dark);
   }
-  #sidebar-nav li a:hover::before {
+  #sidebar-nav li a::before {
     content: "\f0da";
     font-family: "Font Awesome 5 Free";
-    margin-right: 5px;
     position: absolute;
-    height: 15px;
-    width: 15px;
-    left:50px;
-
+    left: 50px;
+    opacity: 0;
+    color: var(--accent-color-dark);
+    /* transition idea from https://bavotasan.com/2011/a-simple-fade-with-css3/ */
+    transition: opacity .25s ease-in;
+  }
+  #sidebar-nav li a:hover::before {
+    opacity: 1;
   }
   
 
@@ -140,7 +148,7 @@ a:hover{
   color: var(--primary-color);
 }
 #my-info .social-list li > a:hover {
-  color: var(--second-supporting-color-light);
+  color: var(--accent-color-dark);
 }
 
 
@@ -157,7 +165,6 @@ a:hover{
   }
 
   .portfolio-me a{
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 600;
     color: #555;
     font-size: 13px;
@@ -177,7 +184,6 @@ a:hover{
 }
 
  .portfolio-breadcrumb a{
-   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
    font-weight: 600;
    font-size: 13px;
    letter-spacing: 2.5px;
@@ -201,6 +207,15 @@ a:hover{
   padding-bottom: 10px;
 }
 
+.portfolio-intro .social-list a {
+  font-size: 18px;
+}
+.portfolio-intro .social-list a i {
+  vertical-align: middle;
+  font-size: 35px;
+  margin-right: 5px;
+}
+
 .portfolio-index{
   margin: 0;
   padding: 10px 50px;
@@ -213,6 +228,7 @@ a:hover{
   }
   .portfolio-index .cell .thumbnail:hover {
     filter: brightness(87.5%);
+    border: solid 4px var(--accent-color-light);
   }
 
   .portfolio-index .cell a > h5{
@@ -231,9 +247,6 @@ a:hover{
       text-align: center;
     }
 
-.portfolio-meta{
-  
-}
 
   .portfolio-meta .button{
     margin-bottom: 5px;

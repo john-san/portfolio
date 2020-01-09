@@ -6,12 +6,12 @@ $('.reveal').on('click', (e) => {
 });
 
 // modified animateCSS helper, from https://github.com/daneden/animate.css
-function animateCSS(element, animationName, callback) {
+function animateCSS(element, animationName, callback, speed = "slow") {
   const node = element;
-  node.classList.add('animated', animationName);
+  node.classList.add('animated', animationName, speed);
 
   function handleAnimationEnd() {
-    node.classList.remove('animated', animationName);
+    node.classList.remove('animated', animationName, speed);
     node.removeEventListener('animationend', handleAnimationEnd);
 
     if (typeof callback === 'function') callback()
@@ -20,10 +20,13 @@ function animateCSS(element, animationName, callback) {
   node.addEventListener('animationend', handleAnimationEnd);
 };
 
-
+/** On page load animations **/
 $(document).ready(() => {
+  const articleGrids = [...document.querySelectorAll('article.grid-container')];
+  articleGrids.forEach(article => animateCSS(article, 'fadeIn'));
+
+  /** slide home page portfolio pages up **/
   const portfolioCells = [...document.querySelectorAll('.portfolio-index .cell')];
-  portfolioCells.forEach((cell) => {
-    animateCSS(cell, 'fadeInLeft');
-  });
+  portfolioCells.forEach(cell => animateCSS(cell, 'fadeInUp'));
 });
+
