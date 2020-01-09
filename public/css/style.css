@@ -48,16 +48,25 @@ h1, h2, h3, h4, h5, p{
   }
 
   p {
-    font-size: 15px;
-    color: #666;
+    font-size: 18px;
+    color: var(--second-supporting-color-dark);
   }
 
 .round{
   border-radius: 5px;
 }
 
+/* borrowed from https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+  transform: scale(1.1); 
+}
+
 .text-light{
-  /* color: #666; */
+  color: var(--second-supporting-color-light);
 }
 
 .button{
@@ -95,6 +104,8 @@ a:hover{
 }
   #my-info .thumbnail {
     border-radius: 50%;
+    border: solid 5px var(--primary-color);
+    box-shadow: 0 0 8px var(--accent-color-dark);
   }
 
   #my-info h5 {
@@ -109,13 +120,29 @@ a:hover{
     font-size: 20px;
   }
 
-  #sidebar-nav li a:hover {
+  #sidebar-nav li a:hover 
+  {
     color: var(--second-supporting-color-light);
   }
+  #sidebar-nav li a:hover::before {
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left:50px;
 
-.social-list li > a {
+  }
+  
+
+#my-info .social-list li > a {
   color: var(--primary-color);
 }
+#my-info .social-list li > a:hover {
+  color: var(--second-supporting-color-light);
+}
+
 
 .portfolio-me{
   padding: 20px;

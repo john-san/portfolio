@@ -8,6 +8,7 @@ html(class="no-js" lang="en" dir="ltr")
     link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
     link(rel='stylesheet', href='/static/css/foundation.css')
     link(rel='stylesheet', href='/static/css/all.min.css')
+    link(rel='stylesheet', href='/static/animate.min.css')
     link(rel='stylesheet', href='/static/css/style.css')
   body
     #my-info.off-canvas.position-left.reveal-for-large.portfolio-me(data-off-canvas='')
@@ -28,20 +29,11 @@ html(class="no-js" lang="en" dir="ltr")
             //- Add about page route to the href below.
             ul#sidebar-nav.vertical.menu.align-center
               li
-                  a(href='/') Home
+                a(href='/') Home
               li
                 a(href='/about') About
 
-            ul.social-list.menu.align-center
-              li
-                a(href='mailto:nguyen.johnsan@gmail.com' target='_blank')
-                  i.fas.fa-envelope-square.fa-2x
-              li
-                a(href='https://github.com/john-san' target='_blank')
-                  i.fab.fa-github-square.fa-2x
-              li
-                a(href='https://www.linkedin.com/in/john-san/' target='_blank')
-                  i.fab.fa-linkedin.fa-2x
+            include includes/socialrow.pug
               
               
 

@@ -20,7 +20,7 @@ block content
       
       //- Here's what the Pug for each project example should look like. 
       each project in projects
-        .cell
+        .cell.grow
           a(href=`/projects/${project.id}`)
             img.thumbnail(src=`${project.image_urls.cover}`)
             h5 #{project.project_name}
