@@ -7,6 +7,7 @@ const { handleFourOhFour, handleGlobalError } = require('./errors/errorHandler')
 app.set('view engine', 'pug');
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('/static', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
 
 app.use(routes);
 

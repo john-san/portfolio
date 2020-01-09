@@ -1,23 +1,53 @@
+/*** Variables ***/
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: #d41900;
+  --accent-color-light: #ff351a;
+  --accent-color-dark: #b31500;
+  --first-supporting-color: #6a3835;
+  --first-supporting-color-light: #b26a66;
+  --first-supporting-color-dark: #773f3c;
+  --second-supporting-color: #808080;
+  --second-supporting-color-light: #8c8c8c;
+  --second-supporting-color-dark: #595959;
 
-h1,h2,h3,h4,h5,p{
+  --general-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+h1, h2 {
+  color: var(--accent-color);
+}
+
+h3, h4, h5, h6 {
+  color: var(--second-supporting-color-dark);
+}
+
+
+
+.text-light {
+  color: var(--second-supporting-color-dark);
+}
+
+h1, h2, h3, h4, h5, p{
   font-family: 'Merriweather', serif;
 }
 
-  h5{
+  h5 {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 2.5px;
     -webkit-text-transform: uppercase;
     text-transform: uppercase;
   }
 
-  h6{
+  h6 {
     letter-spacing: 2.5px;
     -webkit-text-transform: uppercase;
     text-transform: uppercase;
     font-weight: 600;
   }
 
-  p{
+  p {
     font-size: 15px;
     color: #666;
   }
@@ -26,30 +56,28 @@ h1,h2,h3,h4,h5,p{
   border-radius: 5px;
 }
 
-/* override foundation reveal styles */
-.reveal {
-  background-color: initial;
-  padding: 0;
-}
-
 .text-light{
-  color: #666;
+  /* color: #666; */
 }
 
 .button{
   background-color: #333;
+  border: 2px solid rgba(0,0,0,0);
+  border-radius: 8px;
+  box-shadow: var(--general-shadow);
 }
 
 .button:hover{
   background-color: #111;
+  border: 2px solid var(--accent-color);
 }
 
 a{
-  color: #333;
+  color: var(--accent-color-light);
 }
 
 a:hover{
-  color: #111;
+  color: var(--accent-color-dark);
 }
 
 .image{
@@ -60,6 +88,33 @@ a:hover{
   border-radius: 0;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
   line-height: 0;
+}
+
+#my-info {
+  text-align: center;
+}
+  #my-info .thumbnail {
+    border-radius: 50%;
+  }
+
+  #my-info h5 {
+    color: var(--accent-color);
+  }
+
+#sidebar-nav {
+  
+}
+  #sidebar-nav li a {
+    color: var(--primary-color);
+    font-size: 20px;
+  }
+
+  #sidebar-nav li a:hover {
+    color: var(--second-supporting-color-light);
+  }
+
+.social-list li > a {
+  color: var(--primary-color);
 }
 
 .portfolio-me{
@@ -101,7 +156,13 @@ a:hover{
    letter-spacing: 2.5px;
    -webkit-text-transform: uppercase;
    text-transform: uppercase;
+   color: var(--second-supporting-color);
  }
+
+ .portfolio-breadcrumb a:hover {
+  color: var(--second-supporting-color-dark);
+}
+
 
 .portfolio-intro{
   margin: 0;
@@ -118,12 +179,20 @@ a:hover{
   padding: 10px 50px;
 }
 
-  .portfolio-index .thumbnail{
+  .portfolio-index .cell .thumbnail {
     margin-bottom: 5px;
+    box-shadow: var(--general-shadow);
+    border-radius: 5px;
+  }
+  .portfolio-index .cell .thumbnail:hover {
+    filter: brightness(87.5%);
   }
 
-  .portfolio-index a{
-    color: #222;
+  .portfolio-index .cell a > h5{
+    color: var(--first-supporting-color-light);
+  }
+  .portfolio-index .cell:hover a > h5{
+    color: var(--first-supporting-color-dark);
   }
 
   .portfolio-index .cell{
@@ -132,6 +201,7 @@ a:hover{
 
     .portfolio-index .cell h5{
       letter-spacing: 1px;
+      text-align: center;
     }
 
 .portfolio-meta{
@@ -164,13 +234,29 @@ a:hover{
     line-height: 25px;
 }
 
-.error-message {
-
-}
-
 .error-message .error-stack {
   font-size: 12px;
   line-height: 2;
+  background: rgba(128,128,128,0.25);
+  padding: 8px;
+  border-radius: 4px;
+  color: red;
+}
+
+
+
+/*** Override Foundation styles ***/
+.reveal {
+  background-color: initial;
+  padding: 0;
+}
+
+.title-bar-left .title-bar-title {
+  margin-left: 8px;
+}
+
+.thumbnail {
+  border: solid 4px var(--second-supporting-color-dark);
 }
 
 

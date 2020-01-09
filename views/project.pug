@@ -27,7 +27,7 @@ block content
         a.button.expanded(href=`${project.github_link}` target="_blank") GitHub Repo
     
     //- Replace the URLs in the src attributes below with template literals and interpolation to dynamically add three project images.  You only have to add one image.  But adding more images to show your app in different states demonstrates a level of thoroughness and professionalism that potential employers will like to see. 
-    each image_url, idx in project.image_urls.slice(1)
+    each image_url, idx in project.image_urls.gallery
       img.image(src=`${image_url}` data-open=`gallery-image-${idx}`)
       
       div.reveal.large(id=`gallery-image-${idx}` data-reveal data-animation-in="fade-in" data-animation-out="fade-out" data-close-on-click="true")

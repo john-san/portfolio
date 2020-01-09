@@ -12,10 +12,11 @@ router.get('/about', (req, res) => {
 
 router.get('/projects/:id', (req, res, next) => {
   const projectId = parseFloat(req.params.id);
-  if (projectId > projects.length) {
-    const err = new Error('No such project exists');
+
+  if (projectId > projects.length || projectId <= 0) {
     return next(); // goes to 404
   }
+
   const project = projects.find(project => project["id"] === projectId);
   res.render('project', { project });
 });
