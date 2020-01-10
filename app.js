@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path'); 
 const app = express();
+const port = process.env.PORT || 3000;
+
 const routes = require('./routes/');
 const { handleFourOhFour, handleGlobalError } = require('./errors/errorHandler');
 
@@ -18,6 +20,6 @@ app.use(routes);
 app.use(handleFourOhFour);
 app.use(handleGlobalError);
 
-app.listen(3000, '0.0.0.0', function() {
-  console.log('Listening to port:  ' + 3000);
+app.listen(port, '0.0.0.0', function() {
+  console.log('Listening to port:  ' + port);
 });
