@@ -28,3 +28,4 @@ Lastly, this project also serves as a portfolio to demonstrate my abilities in w
 7. CSS: Use different background image from [transparent textures](https://www.transparenttextures.com/).
 8. CSS: Use custom color scheme.
 9. CSS: Add box-shadows to portfolio thumbnails and gallery images.
+10. CSS: Make adjustments to improve text readability.(add .paper-bg to text areas, slight text-shadow on header text)
