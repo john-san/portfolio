@@ -1,36 +1,43 @@
 extends layout.pug
 
 block content 
-  nav.grid-container.portfolio-breadcrumb
-    a(href='/') ← Back
+  include includes/breadcrumb.pug
+
   article.grid-container.portfolio-intro.portfolio-project
     .grid-x
       .cell.small-12.medium-9.large-9
 
-        //- Use interpolation to dynamically add the project title.
         h1= project.project_name
 
-        //- Use interpolation to dynamically add the project description.
         p.lead.text-light
           | #{project.description}
 
       .cell.portfolio-meta.small-12.medium-2.large-3
         h6 Technologies
 
-        //- Use an `each` iterator to replace the li tags below and interpolation to dynamically add the technologies used in each project.
         each technology in project.technologies
           ul
             li #{technology}
 
-        //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.
         a.button.expanded(href=`${project.live_link}` target="_blank") Live Demo
         a.button.expanded(href=`${project.github_link}` target="_blank") GitHub Repo
     
-    //- Replace the URLs in the src attributes below with template literals and interpolation to dynamically add three project images.  You only have to add one image.  But adding more images to show your app in different states demonstrates a level of thoroughness and professionalism that potential employers will like to see. 
-    each image_url, idx in project.image_urls.gallery
-      img.image(src=`${image_url}` data-open=`gallery-image-${idx}`)
-      
-      div.reveal.large(id=`gallery-image-${idx}` data-reveal data-animation-in="fade-in" data-animation-out="fade-out" data-close-on-click="true")
-        img(src=`${image_url}`)
-        button.close-button(data-close='' aria-label='Close modal' type='button')
-          span(aria-hidden='true') &times;
+    //- desktop gallery
+    .project-gallery-lg
+      each image_url, idx in project.image_urls.gallery
+        img.image(src=`${image_url}` data-open=`gallery-image-${idx}`)
+        
+        div.reveal.large(id=`gallery-image-${idx}` data-reveal data-animation-in="fade-in" data-animation-out="fade-out" data-close-on-click="true")
+          img(src=`${image_url}`)
+          button.close-button(data-close='' aria-label='Close modal' type='button')
+            span(aria-hidden='true') &times;
+
+    //- mobile gallery
+    .project-gallery-sm
+      each image_url, idx in project.image_urls.gallery_sm
+        img.image(src=`${image_url}` data-open=`gallery-image-sm-${idx}`)
+        
+        div.reveal.large(id=`gallery-image-sm-${idx}` data-reveal data-animation-in="fade-in" data-animation-out="fade-out" data-close-on-click="true")
+          img(src=`${image_url}`)
+          button.close-button(data-close='' aria-label='Close modal' type='button')
+            span(aria-hidden='true') &times;

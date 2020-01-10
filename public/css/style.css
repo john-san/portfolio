@@ -11,15 +11,26 @@
   --second-supporting-color: #808080;
   --second-supporting-color-light: #8c8c8c;
   --second-supporting-color-dark: #595959;
-
-  --general-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  --general-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  --general-border: solid 4px var(--first-supporting-color-dark);
+  --general-border-hover: solid 4px var(--accent-color-light);
 }
 
-h1, h2 {
+body {
+  background-color: #fff;
+  /* Image from https://www.transparenttextures.com/ */
+  background-image: url('/static/images/white-carbonfiber.png');
+}
+
+h1,
+h2 {
   color: var(--accent-color);
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   color: var(--second-supporting-color-dark);
 }
 
@@ -29,33 +40,39 @@ h3, h4, h5, h6 {
   color: var(--second-supporting-color-dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Exo', sans-serif;
 }
 
-body, p {
+body,
+p {
   font-family: 'Roboto Slab', serif;
 }
 
-  h5 {
-    letter-spacing: 2.5px;
-    -webkit-text-transform: uppercase;
-    text-transform: uppercase;
-  }
+h5 {
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+}
 
-  h6 {
-    letter-spacing: 2.5px;
-    -webkit-text-transform: uppercase;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+h6 {
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 
-  p {
-    font-size: 18px;
-    color: var(--second-supporting-color-dark);
-  }
+p {
+  font-size: 18px;
+  color: var(--second-supporting-color-dark);
+}
 
-.round{
+.round {
   border-radius: 5px;
 }
 
@@ -64,26 +81,24 @@ body, p {
 }
 
 /* borrowed from https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
-.grow { 
-  transition: all .2s ease-in-out; 
+.grow {
+  transition: all .2s ease-in-out;
 }
 
-.grow:hover { 
-  transform: scale(1.1); 
+.grow:hover {
+  transform: scale(1.1);
 }
 
-.text-light{
-  color: var(--second-supporting-color-light);
-}
 
-.button{
+
+.button {
   background-color: #333;
-  border: 2px solid rgba(0,0,0,0);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 8px;
   box-shadow: var(--general-shadow);
 }
 
-.button:hover{
+.button:hover {
   background-color: #111;
   border: 2px solid var(--accent-color);
 }
@@ -92,117 +107,125 @@ a {
   color: var(--accent-color-light);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--accent-color-dark);
 }
 
-.image{
+.image {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 1rem;
-  border: solid 4px #fefefe;
-  border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  border: var(--general-border);
+  border-radius: 4px;
+  box-shadow: var(--general-shadow);
   line-height: 0;
+}
+
+.image:hover {
+  border: var(--general-border-hover);
 }
 
 #my-info {
   text-align: center;
 }
-  #my-info .thumbnail {
-    border-radius: 50%;
-    border: solid 5px var(--primary-color);
-    box-shadow: 0 0 8px var(--accent-color-dark);
-  }
 
-  #my-info h5 {
-    color: var(--accent-color);
-  }
+#my-info .thumbnail {
+  border-radius: 50%;
+  border: solid 5px var(--primary-color);
+  box-shadow: 0 0 22px var(--accent-color-dark);
+}
+
+#my-info h5 {
+  color: var(--accent-color);
+}
 
 
-  #sidebar-nav li a {
-    color: var(--primary-color);
-    font-size: 20px;
-  }
+#sidebar-nav li a {
+  color: var(--primary-color);
+  font-size: 20px;
+}
 
-  #sidebar-nav li a:hover 
-  {
-    color: var(--accent-color-dark);
-  }
-  #sidebar-nav li a::before {
-    content: "\f0da";
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    left: 50px;
-    opacity: 0;
-    color: var(--accent-color-dark);
-    /* transition idea from https://bavotasan.com/2011/a-simple-fade-with-css3/ */
-    transition: opacity .25s ease-in;
-  }
-  #sidebar-nav li a:hover::before {
-    opacity: 1;
-  }
-  
+#sidebar-nav li a:hover {
+  color: var(--accent-color-dark);
+}
 
-#my-info .social-list li > a {
+#sidebar-nav li a::before {
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  color: var(--accent-color-dark);
+  /* transition idea from https://bavotasan.com/2011/a-simple-fade-with-css3/ */
+  transition: opacity .25s ease-in, left .25s ease-in;
+}
+
+#sidebar-nav li a:hover::before {
+  opacity: 1;
+  left: 50px;
+}
+
+
+#my-info .social-list li>a {
   color: var(--primary-color);
 }
-#my-info .social-list li > a:hover {
+
+#my-info .social-list li>a:hover {
   color: var(--accent-color-dark);
 }
 
 
-.portfolio-me{
+.portfolio-me {
   padding: 20px;
   background: #121213;
   color: #fff;
   box-shadow: none !important;
 }
 
-  .portfolio-me p{
-    font-size: 14px;
-    color: #999;
-  }
+.portfolio-me p {
+  font-size: 14px;
+  color: #999;
+}
 
-  .portfolio-me a{
-    font-weight: 600;
-    color: #555;
-    font-size: 13px;
-    letter-spacing: 2.5px;
-    -webkit-text-transform: uppercase;
-    text-transform: uppercase;
-  }
+.portfolio-me a {
+  font-weight: 600;
+  color: #555;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+}
 
-  .portfolio-me a:hover{
-    color: #999;
-  }
+.portfolio-me a:hover {
+  color: #999;
+}
 
-.portfolio-breadcrumb{
+.portfolio-breadcrumb {
   margin: 0;
   padding: 20px;
   border-bottom: 1px solid #eaeaea;
 }
 
- .portfolio-breadcrumb a{
-   font-weight: 600;
-   font-size: 13px;
-   letter-spacing: 2.5px;
-   -webkit-text-transform: uppercase;
-   text-transform: uppercase;
-   color: var(--second-supporting-color);
- }
+.portfolio-breadcrumb a {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2.5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  color: var(--second-supporting-color);
+}
 
- .portfolio-breadcrumb a:hover {
+.portfolio-breadcrumb a:hover {
   color: var(--second-supporting-color-dark);
 }
 
-
-.portfolio-intro{
+.portfolio-intro {
   margin: 0;
   padding: 40px 50px 30px;
 }
 
-.portfolio-intro p{
+.portfolio-intro p {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 10px;
 }
@@ -210,49 +233,55 @@ a:hover, a:focus {
 .portfolio-intro .social-list a {
   font-size: 18px;
 }
+
 .portfolio-intro .social-list a i {
   vertical-align: middle;
   font-size: 35px;
   margin-right: 5px;
 }
 
-.portfolio-index{
+.portfolio-index {
   margin: 0;
   padding: 10px 50px;
 }
 
-  .portfolio-index .cell .thumbnail {
-    margin-bottom: 5px;
-    box-shadow: var(--general-shadow);
-    border-radius: 5px;
-  }
-  .portfolio-index .cell .thumbnail:hover {
-    filter: brightness(87.5%);
-    border: solid 4px var(--accent-color-light);
-  }
+.portfolio-index .cell .thumbnail {
+  margin-bottom: 5px;
+  box-shadow: var(--general-shadow);
+  border-radius: 5px;
+}
 
-  .portfolio-index .cell a > h5{
-    color: var(--first-supporting-color-light);
-  }
-  .portfolio-index .cell:hover a > h5{
-    color: var(--first-supporting-color-dark);
-  }
+.portfolio-index .cell:hover .thumbnail {
+  filter: brightness(87.5%);
+  border: var(--general-border-hover);
+}
 
-  .portfolio-index .cell{
-    margin-bottom: 15px;
-  }
+.portfolio-index .cell a>h5 {
+  color: var(--first-supporting-color-dark);
+}
 
-    .portfolio-index .cell h5{
-      letter-spacing: 1px;
-      text-align: center;
-    }
+.portfolio-index .cell:hover a>h5 {
+  color: var(--accent-color-light);
+}
 
 
-  .portfolio-meta .button{
-    margin-bottom: 5px;
-  }
 
-.portfolio-project p{
+
+.portfolio-index .cell {
+  margin-bottom: 15px;
+}
+
+.portfolio-index .cell h5 {
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+.portfolio-meta .button {
+  margin-bottom: 5px;
+}
+
+.portfolio-project p {
   border: none;
 }
 
@@ -261,26 +290,32 @@ a:hover, a:focus {
   line-height: 1.8;
 }
 
-.portfolio-project li{
+.portfolio-project li {
   font-size: 13px;
   color: #444;
 }
 
-.portfolio-project .image  {
+/*** portfolio galleries ***/
+.project-gallery-lg {
+  display: none;
+}
+
+.portfolio-project .image {
   cursor: pointer;
 }
 
-.portfolio-bio{
-    line-height: 25px;
+.portfolio-bio {
+  line-height: 25px;
 }
 
 .error-message .error-stack {
   font-size: 12px;
   line-height: 2;
-  background: rgba(128,128,128,0.25);
+  background: rgba(128, 128, 128, 0.6);
   padding: 8px;
   border-radius: 4px;
-  color: red;
+  color: black;
+  white-space: pre;
 }
 
 
@@ -296,22 +331,40 @@ a:hover, a:focus {
 }
 
 .thumbnail {
-  border: solid 4px var(--second-supporting-color-dark);
+  border: var(--general-border);
 }
 
+.menu-icon:hover::after {
+  background: var(--accent-color-light);
+  box-shadow: 0 7px 0 var(--accent-color-light), 0 14px 0 var(--accent-color-light);
+}
+
+.close-button {
+  color: var(--accent-color);
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--accent-color-dark)
+}
+
+.reveal img {
+  width: 100vw;
+  max-width: initial;
+}
 
 /*** Media Queries ***/
-@media screen and (max-width: 39.9375em) {
-  /* adjust modal display for imgs */
-  .reveal img {
-    min-height: 50vh;
-    margin-top: 20vh;
-  }
-}
-
 @media (min-width: 640px) {
-  .portfolio-meta{
+  .portfolio-meta {
     padding-left: 20px;
+  }
+
+  .project-gallery-lg {
+    display: initial;
+  }
+
+  .project-gallery-sm {
+    display: none;
   }
 
 }

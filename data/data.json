@@ -9,7 +9,8 @@
       "github_link": "https://github.com/john-san/quote-generator",
       "image_urls": {
         "cover": "/static/images/550x550/1-cover.png",
-        "gallery": ["/static/images/1200x550/1-gallery-image-1.png", "/static/images/1200x550/1-gallery-image-2.png"]
+        "gallery": ["/static/images/1200x550/1-gallery-image-1.png", "/static/images/1200x550/1-gallery-image-2.png"],
+        "gallery_sm": ["/static/images/550x550/1-gallery-image-1-sm.png", "/static/images/550x550/1-gallery-image-2-sm.png"]
       }
     },
     {
@@ -21,7 +22,8 @@
       "github_link": "https://github.com/john-san/list-pagination-filtering",
       "image_urls": {
         "cover": "/static/images/550x550/2-cover.png", 
-        "gallery": ["/static/images/1200x550/2-gallery-image-1.png", "/static/images/1200x550/2-gallery-image-2.png"]
+        "gallery": ["/static/images/1200x550/2-gallery-image-1.png", "/static/images/1200x550/2-gallery-image-2.png"],
+        "gallery_sm": ["/static/images/550x550/2-gallery-image-1-sm.png", "/static/images/550x550/2-gallery-image-2-sm.png"]
       }
     },
     {
@@ -33,7 +35,8 @@
       "github_link": "https://github.com/john-san/interactive-form",
       "image_urls": {
         "cover": "/static/images/550x550/3-cover.png",
-        "gallery": ["/static/images/1200x550/3-gallery-image-1.png", "/static/images/1200x550/3-gallery-image-2.png", "/static/images/1200x550/3-gallery-image-2.png"]
+        "gallery": ["/static/images/1200x550/3-gallery-image-1.png", "/static/images/1200x550/3-gallery-image-2.png", "/static/images/1200x550/3-gallery-image-2.png"],
+        "gallery_sm": ["/static/images/550x550/3-gallery-image-1-sm.png", "/static/images/550x550/3-gallery-image-2-sm.png", "/static/images/550x550/3-gallery-image-3-sm.png"]
       }
     },
     {
@@ -45,7 +48,8 @@
       "github_link": "https://github.com/john-san/oop-game-show-app",
       "image_urls": {
         "cover": "/static/images/550x550/4-cover.png",
-        "gallery": ["/static/images/1200x550/4-gallery-image-1.png", "/static/images/1200x550/4-gallery-image-2.png", "/static/images/1200x550/4-gallery-image-3.png"]
+        "gallery": ["/static/images/1200x550/4-gallery-image-1.png", "/static/images/1200x550/4-gallery-image-2.png", "/static/images/1200x550/4-gallery-image-3.png"],
+        "gallery_sm": ["/static/images/550x550/4-gallery-image-1-sm.png", "/static/images/550x550/4-gallery-image-2-sm.png", "/static/images/550x550/4-gallery-image-3-sm.png"]
       }
     },
     {
@@ -57,7 +61,8 @@
       "github_link": "https://github.com/john-san/public-api-requests",
       "image_urls": {
         "cover": "/static/images/550x550/5-cover.png",
-        "gallery": ["/static/images/1200x550/5-gallery-image-1.png", "/static/images/1200x550/5-gallery-image-2.png"]
+        "gallery": ["/static/images/1200x550/5-gallery-image-1.png", "/static/images/1200x550/5-gallery-image-2.png"],
+        "gallery_sm": ["/static/images/550x550/5-gallery-image-1-sm.png", "/static/images/550x550/5-gallery-image-2-sm.png"]
       }
     }
   ]
