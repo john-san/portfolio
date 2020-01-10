@@ -4,7 +4,7 @@
 
 **Summary:** This project utilizes Node.js and Express to handle routes and serve .json data to the front end.  
 
-It uses pug to modularize the HTML creation process. If users attempt to view an invalid/non-existent route, they are shown a friendly 404 error page.
+It uses the templating engine, pug, to modularize the HTML creation process. If users attempt to view an invalid/non-existent route, they are shown a friendly 404 error page.
 
 Lastly, this project also serves as a portfolio to demonstrate my abilities in web development to viewers.
 
@@ -21,7 +21,7 @@ Lastly, this project also serves as a portfolio to demonstrate my abilities in w
 
 1. JS+CSS: Use animate.css to animate fadeInUp project cells on the home page.  Also use it to fadeIn article.grid-containers on the right-hand side. 
 2. JS+CSS: Create modals for project gallery images through foundation's reveal feature.
-3. JS+CSS: On project pages, show mobile-friendly gallery images for smaller screens and larger images for larger screens.
+3. Pug+CSS: On project pages, show mobile-friendly gallery images for smaller screens and larger images for larger screens.
 4. CSS: Import and use fontAwesome icons.
 5. CSS: Import and use different google fonts ('Exo' and 'Roboto Slab').
 6. CSS: Add custom css transitions (arrow next to #sidebar-nav, .grow on homepage thumbnails).

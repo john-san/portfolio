@@ -47,6 +47,7 @@ h4,
 h5,
 h6 {
   font-family: 'Exo', sans-serif;
+  text-shadow: 0 0 8px rgba(128,128,128,0.25);
 }
 
 body,
@@ -80,6 +81,17 @@ p {
   display: none;
 }
 
+.paper-bg {
+  background-color: white;
+  padding: 6px 8px;
+  border-radius: 4px;
+  box-shadow: var(--general-shadow);
+}
+
+.portfolio-project .paper-bg {
+  margin-bottom: 1.5rem;
+}
+
 /* borrowed from https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
 .grow {
   transition: all .2s ease-in-out;
@@ -92,15 +104,13 @@ p {
 
 
 .button {
-  background-color: #333;
-  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: var(--first-supporting-color);
   border-radius: 8px;
   box-shadow: var(--general-shadow);
 }
 
-.button:hover {
-  background-color: #111;
-  border: 2px solid var(--accent-color);
+.button:hover, .button:focus {
+  background-color: var(--accent-color-dark);
 }
 
 a {
@@ -213,11 +223,11 @@ a:focus {
   letter-spacing: 2.5px;
   -webkit-text-transform: uppercase;
   text-transform: uppercase;
-  color: var(--second-supporting-color);
+  color: var(--first-supporting-color-dark);
 }
 
 .portfolio-breadcrumb a:hover {
-  color: var(--second-supporting-color-dark);
+  color: var(--accent-color);
 }
 
 .portfolio-intro {
@@ -311,7 +321,7 @@ a:focus {
 .error-message .error-stack {
   font-size: 12px;
   line-height: 2;
-  background: rgba(128, 128, 128, 0.6);
+  background: white;
   padding: 8px;
   border-radius: 4px;
   color: black;
@@ -365,6 +375,11 @@ a:focus {
 
   .project-gallery-sm {
     display: none;
+  }
+
+  .reveal img {
+    width: 100%;
+    max-width: 100%;
   }
 
 }
