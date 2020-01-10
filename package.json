@@ -12,12 +12,15 @@
     "url": "git+https://github.com/john-san/portfolio.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "John Nguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/john-san/portfolio/issues"
   },
   "homepage": "https://github.com/john-san/portfolio#readme",
+  "engines": {
+    "node": "12.14.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "animate.css": "^3.7.2",
