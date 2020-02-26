@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const projects = require('../data/data.json').projects.reverse();
+const lowestProjectId = 3;
+const projects = require('../data/data.json').projects.slice(lowestProjectId - 1).reverse();
+const lastProjectId = projects[0].id;
 
 router.get('/', (req, res) => {
   res.render('index', { projects });
@@ -15,7 +17,7 @@ router.get('/projects/:id', (req, res, next) => {
   const projectId = parseFloat(req.params.id);
 
   // run 404 error if id is invalid
-  if (projectId > projects.length || projectId <= 0) {
+  if (projectId > lastProjectId || projectId < lowestProjectId) {
     return next(); 
   }
 

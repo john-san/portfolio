@@ -28,22 +28,30 @@
     },
     {
       "id": 3,
-      "project_name": "Interactive Form",
-      "description": "This project uses JavaScript & jQuery to add extra functionality to the form, making it easier to use. It follows progressive enhancement principles so the form still works at a basic level when JavaScript is disabled. Lastly, it uses JavaScript to validate the form in real-time and when a user tries to submit the form.",
-      "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
-      "live_link": "https://john-san.github.io/interactive-form/",
-      "github_link": "https://github.com/john-san/interactive-form",
+      "project_name": "House of Hue Nails",
+      "description": "I created a wordpress website for brother and sister-in-law's nail salon.  This website helps their business by providing their menu, contact information, and store hours.  Furthermore, I made the website mobile responsive and created several convenient ways for visitors to get in touch with the business owners.",
+      "technologies": ["SCSS", "Bootstrap", "Wordpress"],
+      "live_link": "https://houseofhuenails.com/",
+      "github_link": "",
       "image_urls": {
-        "cover": "/static/images/550x550/3-cover.png",
-        "gallery": ["/static/images/1200x550/3-gallery-image-1.png", "/static/images/1200x550/3-gallery-image-2.png", "/static/images/1200x550/3-gallery-image-3.png"],
-        "gallery_sm": ["/static/images/550x550/3-gallery-image-1-sm.png", "/static/images/550x550/3-gallery-image-2-sm.png", "/static/images/550x550/3-gallery-image-3-sm.png"]
+        "cover": "/static/images/550x550/hoh-cover.png",
+        "gallery": [
+          "/static/images/1200x550/hoh-gallery-image-1.png",
+          "/static/images/1200x550/hoh-gallery-image-2.png", 
+          "/static/images/1200x550/hoh-gallery-image-3.png"
+      ],
+        "gallery_sm": [
+          "/static/images/550x550/hoh-gallery-image-1-sm.png",
+          "/static/images/550x550/hoh-gallery-image-2-sm.png", 
+          "/static/images/550x550/hoh-gallery-image-3-sm.png"
+        ]
       }
     },
     {
       "id": 4,
       "project_name": "Game Show App",
       "description": "This project uses JavaScript and Object-Oriented Programming to create a phrase hunter game. It allows players to guess letters of a random phrase by either selecting a key from the onscreen keyboard or by pressing a key on their physical keyboard. If the player completes the phrase before they run out of guesses, a winning screen appears. If the player guesses incorrectly five times, a losing screen appears.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": ["JavaScript", "CSS", "HTML"],
       "live_link": "https://john-san.github.io/oop-game-show-app/",
       "github_link": "https://github.com/john-san/oop-game-show-app",
       "image_urls": {
@@ -56,13 +64,70 @@
       "id": 5,
       "project_name": "Employee Directory",
       "description": "This project fetches employee data from a public API and displays that data in a user-friendly gallery. Users can click on an employee's card to open up a modal and view more details about that employee. While in the modal view, users can use the next and previous buttons(or left & right arrow keys) to toggle through the employees. In addition, there is a search bar at the top right of the gallery view that allows users to search for employees by name.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
+      "technologies": ["JavaScript", "CSS", "HTML"],
       "live_link": "https://john-san.github.io/public-api-requests/",
       "github_link": "https://github.com/john-san/public-api-requests",
       "image_urls": {
         "cover": "/static/images/550x550/5-cover.png",
         "gallery": ["/static/images/1200x550/5-gallery-image-1.png", "/static/images/1200x550/5-gallery-image-2.png"],
         "gallery_sm": ["/static/images/550x550/5-gallery-image-1-sm.png", "/static/images/550x550/5-gallery-image-2-sm.png"]
+      }
+    },
+    {
+      "id": 6,
+      "project_name": "React Gallery App",
+      "description": "This project uses the modern JavaScript front-end library, React, to render a photo gallery. The photos are fetched from the Flickr API using axios.",
+      "technologies": ["React", "Axios", "CSS"],
+      "live_link": "https://john-nguyen-react-gallery.netlify.com/",
+      "github_link": "https://github.com/john-san/react-gallery-app",
+      "image_urls": {
+        "cover": "/static/images/550x550/6-cover.png",
+        "gallery": ["/static/images/1200x550/6-gallery-image-1.png", "/static/images/1200x550/6-gallery-image-2.png"],
+        "gallery_sm": ["/static/images/550x550/6-gallery-image-1-sm.png", "/static/images/550x550/6-gallery-image-2-sm.png"]
+      }
+    },
+    {
+      "id": 7,
+      "project_name": "SQL Library Manager",
+      "description": "This is a library manager built on express. It uses the Sequelize ORM to grab book data from a SQLite database and then renders that data using the Pug template engine.",
+      "technologies": ["Express", "Sequelize", "Pug"],
+      "live_link": "",
+      "github_link": "https://github.com/john-san/sql-library-manager",
+      "image_urls": {
+        "cover": "/static/images/550x550/7-cover.png",
+        "gallery": [
+          "/static/images/1200x550/7-gallery-image-1.png", 
+          "/static/images/1200x550/7-gallery-image-2.png",
+          "/static/images/1200x550/7-gallery-image-3.png"
+        ],
+        "gallery_sm": [
+          "/static/images/550x550/7-gallery-image-1-sm.png", 
+          "/static/images/550x550/7-gallery-image-2-sm.png",
+          "/static/images/550x550/7-gallery-image-3-sm.png"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "project_name": "Full Stack React REST App",
+      "description": "This is a full stack application with React handling the front end and express handling the back end. It's a course manager where users can view others' courses or they can sign up and manage their own courses.",
+      "technologies": ["React", "Express", "Sequelize"],
+      "live_link": "",
+      "github_link": "https://github.com/john-san/full-stack-rest-api",
+      "image_urls": {
+        "cover": "/static/images/550x550/8-cover.png",
+        "gallery": [
+          "/static/images/1200x550/8-gallery-image-1.png", 
+          "/static/images/1200x550/8-gallery-image-2.png",
+          "/static/images/1200x550/8-gallery-image-3.png", 
+          "/static/images/1200x550/8-gallery-image-4.png"
+        ],
+        "gallery_sm": [
+          "/static/images/550x550/8-gallery-image-1-sm.png",
+          "/static/images/550x550/8-gallery-image-2-sm.png",
+          "/static/images/550x550/8-gallery-image-3-sm.png",
+          "/static/images/550x550/8-gallery-image-4-sm.png"
+        ]
       }
     }
   ]
