@@ -28,8 +28,8 @@
     },
     {
       "id": 3,
-      "project_name": "House of Hue Nails",
-      "description": "I created a wordpress website for brother and sister-in-law's nail salon.  This website helps their business by providing their menu, contact information, and store hours.  Furthermore, I made the website mobile responsive and created several convenient ways for visitors to get in touch with the business owners.",
+      "project_name": "House of Hue",
+      "description": "I created a wordpress website for my brother & sister-in-law's nail salon.  This website helps their business by providing their menu, contact information, and store hours.  Furthermore, I made the website mobile responsive and created several convenient ways for visitors to get in touch with the business owners.",
       "technologies": ["SCSS", "Bootstrap", "Wordpress"],
       "live_link": "https://houseofhuenails.com/",
       "github_link": "",
