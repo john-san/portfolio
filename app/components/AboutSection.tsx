@@ -1,9 +1,9 @@
 import ProfileCard from "./ProfileCard";
 
-export default function BioSection() {
+export default function AboutSection() {
 
   return (
-				<section className="min-h-screen">
+				<section id="about" className="min-h-screen">
 					<div className="container mx-auto flex flex-wrap py-4">
 						{/* Profile Card */}
 						<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">

@@ -3,11 +3,11 @@ import { faCode, faPaintBrush} from '@fortawesome/free-solid-svg-icons';
 import { faWordpress } from "@fortawesome/free-brands-svg-icons";
 
 
-export default function ExpertiseSection() {
+export default function SkillsSection() {
   return (
-    <section className="py-16 bg-gray-100 min-h-screen">
+    <section id="skills" className="py-16 bg-gray-100 min-h-screen">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Expertise</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">My Skills</h2>
         <div className="flex flex-wrap justify-center gap-10">
           <div className="w-full md:w-1/3 lg:w-1/4 text-center">
             <div className="mb-4">

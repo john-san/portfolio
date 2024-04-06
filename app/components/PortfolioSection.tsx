@@ -38,7 +38,7 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section className="portfolio section py-12 px-4 md:px-8 min-h-screen" id="portfolio">
+    <section id="portfolio" className="portfolio section py-12 px-4 md:px-8 min-h-screen">
       <h2 className="section-title text-3xl font-bold text-center mb-8">Portfolio</h2>
       <div className="portfolio__container bd-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (

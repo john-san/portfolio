@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
-export default function ContactForm() {
+export default function ContactSection() {
 	const [name, setName] = useState<string>("")
 	const [email, setEmail] = useState<string>("")
 	const [message, setMessage] = useState<string>("")
@@ -45,7 +45,7 @@ export default function ContactForm() {
 	}
 
 	return (
-		<section className="min-h-screen">
+		<section id="contact" className="min-h-screen">
 			<form
 				onSubmit={handleSubmit}
 				className="space-y-4 max-w-md mx-auto my-10"

@@ -1,10 +1,9 @@
 "use client"
 import Head from "next/head"
-import { useEffect, useState } from "react"
-import ExpertiseSection from "./components/ExpertiseSection"
-import BioSection from "./components/BioSection"
-import ContactForm from "./components/ContactForm"
+import AboutSection from "./components/AboutSection"
+import SkillsSection from "./components/SkillsSection"
 import PortfolioSection from "./components/PortfolioSection"
+import ContactSection from "./components/ContactSection"
 import { ParallaxBanner } from "react-scroll-parallax"
 
 export default function Home() {
@@ -12,10 +11,10 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>My Portfolio</title>
+				<title>John Nguyen&apos;s Portfolio</title>
 			</Head>
 
-			<section className="hero-banner">
+			<section id="home">
 				<ParallaxBanner
 					layers={[
 						{ image: "/images/mtfuji.jpg", speed: -20 },
@@ -37,10 +36,10 @@ export default function Home() {
 			</section>
 
 			<div>
-				<BioSection />
-				<ExpertiseSection />
+				<AboutSection />
+				<SkillsSection />
 				<PortfolioSection />
-				<ContactForm />
+				<ContactSection />
 			</div>
 		</div>
 	)
