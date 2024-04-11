@@ -6,7 +6,7 @@ import { faFile } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProfileCard() {
 	return (
-		<div className="flex flex-col items-center bg-white p-4 shadow-xl rounded-lg m-auto">
+		<div className="flex flex-col items-center bg-white p-4 shadow-md rounded-lg m-auto">
 			<Image
 				className="rounded-full object-cover"
 				width={128}

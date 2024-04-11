@@ -1,88 +1,102 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faUser,
 	faEnvelope,
 	faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactSection() {
-	const [name, setName] = useState<string>("")
-	const [email, setEmail] = useState<string>("")
-	const [message, setMessage] = useState<string>("")
+	const [name, setName] = useState<string>("");
+	const [email, setEmail] = useState<string>("");
+	const [message, setMessage] = useState<string>("");
 
 	const handleSubmit = async (event: any) => {
-		event.preventDefault()
+		event.preventDefault();
 
 		if (!name || !email || !message) {
-			alert("Please fill in all fields.")
-			return
+			toast.error("Please fill in all fields.");
+			return;
 		}
+
+		const attemptToastId = 'attempt-send';
+		toast.info("Attempting to send message...", {
+        toastId: attemptToastId,
+    });
 
 		const formData = {
 			name,
 			email,
 			message,
-		}
+		};
 
-		// Send the form data to our API route
 		const response = await fetch("/api/sendEmail", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(formData),
-		})
+		});
 
 		if (response.ok) {
-			console.log("Email sent successfully")
-      setName("");
-      setEmail("");
-      setMessage("");
+			toast.dismiss(attemptToastId);
+			toast.success("Message sent successfully! Thank you!");
+			setName("");
+			setEmail("");
+			setMessage("");
 		} else {
-			console.log("Failed to send email")
+			toast.dismiss(attemptToastId);
+			toast.error("Failed to send message. Please try again.");
 		}
-	}
+	};
 
 	return (
-		<section id="contact" className="min-h-screen">
-			<form
-				onSubmit={handleSubmit}
-				className="space-y-4 max-w-md mx-auto my-10"
-			>
-				<div>
-					<label htmlFor="name" className="flex items-center space-x-2">
-						<FontAwesomeIcon icon={faUser} />
-						<span>Name</span>
-					</label>
-					<input
-						id="name"
-						name="name"
-						type="text"
-						autoComplete="name"
-						required
-						className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
-						placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-					/>
-				</div>
-				<div>
-					<label htmlFor="email" className="flex items-center space-x-2">
-						<FontAwesomeIcon icon={faEnvelope} />
-						<span>Email</span>
-					</label>
-					<input
-						id="email"
-						name="email"
-						type="email"
-						autoComplete="email"
-						required
-						className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
-						placeholder="Your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-					/>
+		<section
+			id="contact"
+			className="bg-gray-100 min-h-screen flex flex-col justify-start items-center px-4 pt-8 md:pt-16"
+		>
+			<ToastContainer />
+			<h2 className="section-title text-3xl font-bold text-center mb-8">
+				Contact Me
+			</h2>
+			<form onSubmit={handleSubmit} className="space-y-4 w-full md:max-w-lg">
+				<div className="flex flex-col md:flex-row gap-4">
+					<div className="flex-1">
+						<label htmlFor="name" className="flex items-center space-x-2">
+							<FontAwesomeIcon icon={faUser} />
+							<span>Name</span>
+						</label>
+						<input
+							id="name"
+							name="name"
+							type="text"
+							autoComplete="name"
+							required
+							className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
+							placeholder="Your name"
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+						/>
+					</div>
+					<div className="flex-1">
+						<label htmlFor="email" className="flex items-center space-x-2">
+							<FontAwesomeIcon icon={faEnvelope} />
+							<span>Email</span>
+						</label>
+						<input
+							id="email"
+							name="email"
+							type="email"
+							autoComplete="email"
+							required
+							className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
+							placeholder="Your email"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+					</div>
 				</div>
 				<div>
 					<label htmlFor="message" className="flex items-center space-x-2">
@@ -96,17 +110,19 @@ export default function ContactSection() {
 						required
 						className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
 						placeholder="Your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+						value={message}
+						onChange={(e) => setMessage(e.target.value)}
 					></textarea>
 				</div>
-				<button
-					type="submit"
-					className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-				>
-					Send
-				</button>
+				<div className="flex justify-end">
+					<button
+						type="submit"
+						className="w-full md:w-auto py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-customNavy-500 hover:bg-customNavy-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-customNavy-500 transition-all duration-300"
+					>
+						Send Message
+					</button>
+				</div>
 			</form>
 		</section>
-	)
+	);
 }

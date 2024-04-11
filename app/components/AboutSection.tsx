@@ -3,8 +3,8 @@ import ProfileCard from "./ProfileCard";
 export default function AboutSection() {
 
   return (
-		<section id="about" className="min-h-screen flex items-center">
-			<div className="container mx-auto flex flex-wrap py-4">
+		<section id="about" className="min-h-screen pt-8 md:pt-16">
+			<div className="container mx-auto flex flex-wrap">
 				<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
 					<ProfileCard />
 				</div>
