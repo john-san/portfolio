@@ -14,7 +14,7 @@ export default function SkillsSection() {
               <FontAwesomeIcon icon={faCode} className="text-4xl" />
             </div>
             <h5 className="font-bold text-lg mb-2">Software Development</h5>
-            <p className="text-gray-600">Experienced in JavaScript/TypeScript, Java, Python, C++, and C#.</p>
+            <p className="text-gray-600 prose md:prose-xl">Experienced in JavaScript/TypeScript, Java, Python, C++, and C#.</p>
           </div>
 
           <div className="w-full md:w-1/3 lg:w-1/4 text-center">
@@ -22,7 +22,7 @@ export default function SkillsSection() {
               <FontAwesomeIcon icon={faPaintBrush} className="text-4xl" />
             </div>
             <h5 className="font-bold text-lg mb-2">Front-end Development</h5>
-            <p className="text-gray-600">React.js, Next.js, TailwindCSS, Bootstrap, HTML/CSS/JS - Seasoned veteran in UI/UX development.</p>
+            <p className="text-gray-600 prose md:prose-xl">React.js, Next.js, TailwindCSS, Bootstrap, HTML/CSS/JS - Seasoned veteran in UI/UX development.</p>
           </div>
 
           <div className="w-full md:w-1/3 lg:w-1/4 text-center">
@@ -30,7 +30,7 @@ export default function SkillsSection() {
               <FontAwesomeIcon icon={faWordpress} className="text-4xl" />
             </div>
             <h5 className="font-bold text-lg mb-2">WordPress Development</h5>
-            <p className="text-gray-600">Skilled in creation, maintenance, and performance optimization for WordPress sites.</p>
+            <p className="text-gray-600 prose md:prose-xl">Skilled in creation, maintenance, and performance optimization for WordPress sites.</p>
           </div>
         </div>
       </div>

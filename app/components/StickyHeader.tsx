@@ -56,9 +56,9 @@ const StickyHeader: React.FC = () => {
   };
 
   return (
-		<header className="fixed top-0 z-50 w-full bg-white shadow-md">
+		<header className="fixed top-0 z-50 w-full bg-customNavy shadow-md">
 			<nav className="max-w-6xl mx-auto px-4 flex justify-between items-center py-3">
-				<Link href="#" className="text-xl font-bold">
+				<Link href="#" className="text-xl font-bold text-gray-100 hover:text-gray-300">
 					John Nguyen
 				</Link>
 				<div className="hidden md:flex space-x-4">
@@ -67,8 +67,8 @@ const StickyHeader: React.FC = () => {
 							key={id}
 							href={`#${id}`}
 							onClick={(e) => handleNavClick(e, id)}
-							className={`py-2 px-4 text-gray-700 hover:text-gray-900 ${
-								activeSection === id ? "text-blue-500 font-bold" : ""
+							className={`py-2 px-4 text-gray-100 hover:text-gray-300 ${
+								activeSection === id ? "font-bold" : ""
 							}`}
 						>
 							{capitalizeFirstLetter(id)}
@@ -81,7 +81,7 @@ const StickyHeader: React.FC = () => {
 				>
 					<FontAwesomeIcon
 						icon={isNavOpen ? faTimes : faBars}
-						className="text-xl"
+						className="text-xl text-gray-100 hover:text-gray-300"
 					/>
 				</button>
 			</nav>
