@@ -7,6 +7,8 @@ import {
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import DOMPurify from 'dompurify';
+
 
 export default function ContactSection() {
 	const [name, setName] = useState<string>("");
@@ -26,27 +28,36 @@ export default function ContactSection() {
         toastId: attemptToastId,
     });
 
+		const sanitizedName = DOMPurify.sanitize(name);
+		const sanitizedEmail = DOMPurify.sanitize(email);
+		const sanitizedMessage = DOMPurify.sanitize(message);
+
 		const formData = {
-			name,
-			email,
-			message,
+			name: sanitizedName,
+			email: sanitizedEmail,
+			message: sanitizedMessage,
 		};
 
-		const response = await fetch("/api/sendEmail", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(formData),
-		});
+		try {
 
-		if (response.ok) {
-			toast.dismiss(attemptToastId);
-			toast.success("Message sent successfully! Thank you!");
-			setName("");
-			setEmail("");
-			setMessage("");
-		} else {
+			const response = await fetch("/api/sendEmail", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (response.ok) {
+				toast.dismiss(attemptToastId);
+				toast.success("Message sent successfully! Thank you!");
+				setName("");
+				setEmail("");
+				setMessage("");
+			} else {
+				throw new Error('Failed to send');
+			}
+		} catch (error) {
 			toast.dismiss(attemptToastId);
 			toast.error("Failed to send message. Please try again.");
 		}
@@ -74,6 +85,7 @@ export default function ContactSection() {
 							type="text"
 							autoComplete="name"
 							required
+							maxLength={50}
 							className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
 							placeholder="Your name"
 							value={name}
@@ -91,6 +103,7 @@ export default function ContactSection() {
 							type="email"
 							autoComplete="email"
 							required
+							maxLength={254}
 							className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
 							placeholder="Your email"
 							value={email}
@@ -103,22 +116,28 @@ export default function ContactSection() {
 						<FontAwesomeIcon icon={faPaperPlane} />
 						<span>Message</span>
 					</label>
-					<textarea
-						id="message"
-						name="message"
-						rows={4}
-						required
-						className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md"
-						placeholder="Your message"
-						value={message}
-						onChange={(e) => setMessage(e.target.value)}
-					></textarea>
+					<div className="relative">
+						<textarea
+							id="message"
+							name="message"
+							rows={4}
+							required
+							maxLength={1000}
+							className="mt-1 block w-full p-2 border-gray-300 shadow-sm rounded-md pb-8"
+							placeholder="Your message"
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}
+							></textarea>
+						<div className="absolute bottom-0 right-0 mb-2 mr-6	 text-sm text-gray-600">
+							{`${message.length} / 1000`}
+						</div>
+					</div>
 				</div>
 				<div className="flex justify-end">
 					<button
 						type="submit"
 						className="w-full md:w-auto py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-customNavy-500 hover:bg-customNavy-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-customNavy-500 transition-all duration-300"
-					>
+						>
 						Send Message
 					</button>
 				</div>
