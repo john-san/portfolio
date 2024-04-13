@@ -55,14 +55,14 @@ const projects = [
     projectUrl: "https://stoic-nobel-207e5b.netlify.app/",
   },
   {
-    title: "Simon Says",
-    imageUrl: "/images/portfolio/simon_says.jpg",
-    projectUrl: "https://john-san.github.io/simon-says/",
-  },
-  {
     title: "Front-end Library",
     imageUrl: "/images/portfolio/fe_library.jpg",
     projectUrl: "https://john-san.github.io/library/",
+  },
+  {
+    title: "Quote Machine",
+    imageUrl: "/images/portfolio/quote_machine.jpg",
+    projectUrl: "https://eloquent-pasteur-6b195a.netlify.app/",
   },
   {
     title: "Rock Paper Scissors",
@@ -70,9 +70,9 @@ const projects = [
     projectUrl: "https://john-san.github.io/rock-paper-scissors2/",
   },
   {
-    title: "Quote Machine",
-    imageUrl: "/images/portfolio/quote_machine.jpg",
-    projectUrl: "https://eloquent-pasteur-6b195a.netlify.app/",
+    title: "Simon Says",
+    imageUrl: "/images/portfolio/simon_says.jpg",
+    projectUrl: "https://john-san.github.io/simon-says/",
   },
 ];
 

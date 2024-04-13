@@ -41,6 +41,7 @@ export default function Home() {
 				<PortfolioSection />
 				<ContactSection />
 			</div>
+
 		</div>
 	)
 }

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import MobileNav from './MobileNav';
-import { capitalizeFirstLetter } from '../utils/utils';
+import { capitalizeFirstLetter, smoothScroll } from '../utils/utils';
 
 const sectionIds = ['home', 'about', 'skills', 'portfolio', 'contact'];
 
@@ -45,14 +45,7 @@ const StickyHeader: React.FC = () => {
     event.preventDefault();
     setIsNavOpen(false); 
 
-    const section = document.getElementById(id);
-    const header = document.querySelector('header');
-
-    if (section && header) {
-      const headerHeight = header.offsetHeight;
-      const yOffset = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-      window.scrollTo({ top: yOffset, behavior: 'smooth' });
-    }
+    smoothScroll(id);
   };
 
   return (
