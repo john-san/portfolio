@@ -42,7 +42,6 @@ export default function ProfileCard() {
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-customNavy hover:text-customNavy-300"
-						download
 					>
 						<FontAwesomeIcon icon={faFile} className="w-6 h-6" />
 					</a>

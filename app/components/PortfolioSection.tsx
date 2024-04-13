@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Slide } from "react-awesome-reveal";
+import { useMediaQuery } from 'react-responsive';
 
 const projects = [
   {
@@ -49,34 +51,35 @@ const projects = [
     imageUrl: "/images/portfolio/calculator.jpg",
     projectUrl: "https://john-san.github.io/calculator/",
   },
-  {
-    title: "Markdown Previewer",
-    imageUrl: "/images/portfolio/markdown_previewer.jpg",
-    projectUrl: "https://stoic-nobel-207e5b.netlify.app/",
-  },
-  {
-    title: "Front-end Library",
-    imageUrl: "/images/portfolio/fe_library.jpg",
-    projectUrl: "https://john-san.github.io/library/",
-  },
-  {
-    title: "Quote Machine",
-    imageUrl: "/images/portfolio/quote_machine.jpg",
-    projectUrl: "https://eloquent-pasteur-6b195a.netlify.app/",
-  },
-  {
-    title: "Rock Paper Scissors",
-    imageUrl: "/images/portfolio/rock-paper-scissors.jpg",
-    projectUrl: "https://john-san.github.io/rock-paper-scissors2/",
-  },
-  {
-    title: "Simon Says",
-    imageUrl: "/images/portfolio/simon_says.jpg",
-    projectUrl: "https://john-san.github.io/simon-says/",
-  },
+  // {
+  //   title: "Markdown Previewer",
+  //   imageUrl: "/images/portfolio/markdown_previewer.jpg",
+  //   projectUrl: "https://stoic-nobel-207e5b.netlify.app/",
+  // },
+  // {
+  //   title: "Front-end Library",
+  //   imageUrl: "/images/portfolio/fe_library.jpg",
+  //   projectUrl: "https://john-san.github.io/library/",
+  // },
+  // {
+  //   title: "Quote Machine",
+  //   imageUrl: "/images/portfolio/quote_machine.jpg",
+  //   projectUrl: "https://eloquent-pasteur-6b195a.netlify.app/",
+  // },
+  // {
+  //   title: "Rock Paper Scissors",
+  //   imageUrl: "/images/portfolio/rock-paper-scissors.jpg",
+  //   projectUrl: "https://john-san.github.io/rock-paper-scissors2/",
+  // },
+  // {
+  //   title: "Simon Says",
+  //   imageUrl: "/images/portfolio/simon_says.jpg",
+  //   projectUrl: "https://john-san.github.io/simon-says/",
+  // },
 ];
 
 export default function PortfolioSection() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
 		<section
 			id="portfolio"
@@ -86,6 +89,7 @@ export default function PortfolioSection() {
 				Portfolio
 			</h2>
 			<div className="portfolio__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Slide direction={isMobile ? "left" : "up"} cascade damping={0.1} triggerOnce> 
 				{projects.map((project, index) => (
 					<div
 						key={index}
@@ -127,6 +131,7 @@ export default function PortfolioSection() {
 						</div>
 					</div>
 				))}
+        </Slide>
 			</div>
 		</section>
 	);
