@@ -23,7 +23,8 @@ export async function POST(req: NextRequest): Promise<Response> {
     await transporter.sendMail({
       // from: email, 
       replyTo: email,
-      to: process.env.GMAIL_EMAIL_ADDRESS, 
+      // to: process.env.GMAIL_EMAIL_ADDRESS, 
+      to: "john@webdevjohn.com", 
       subject: `New Contact Form Submission from ${name}`,
       html: `<p>You have a new contact form submission:</p>
       <p><strong>Name:</strong> ${name}</p>

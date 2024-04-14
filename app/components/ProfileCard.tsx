@@ -17,7 +17,7 @@ export default function ProfileCard() {
 			<div className="text-center mt-4">
 				<h4 className="font-bold text-xl">John Nguyen</h4>
 				<p>
-					<a href="mailto:npjohn92@gmail.com" className="font-bold text-customNavy hover:text-customNavy-300">npjohn92@gmail.com</a>
+					<a href="mailto:john@webdevjohn.com" className="font-bold text-customNavy hover:text-customNavy-300">john@webdevjohn.com</a>
 				</p>
 				<div className="flex justify-center space-x-4 mt-2">
 					<a

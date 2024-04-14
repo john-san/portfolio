@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 				<h4 className="text-lg font-bold mb-2 text-center">Contact</h4>
 				<div className="flex flex-row gap-8 md:flex-col items-start md:gap-2">
 					<a
-						href="mailto:npjohn92@gmail.com"
+						href="mailto:john@webdevjohn.com"
 						className="flex items-center hover:text-gray-300"
 						target="_blank"
 						rel="noopener noreferrer"
